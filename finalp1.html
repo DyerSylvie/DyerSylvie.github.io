@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Final Project</title>
+    <style>
+      body
+      {
+        font-family: Serif, New Century Schoolbook, teX Gyre Schola;
+      }
+      th
+      {
+        font-family: bookman;
+        font-size: 30px;
+        text-align: left;
+      }
+      h3
+      {
+        font-family: bookman;
+      }
+      #buttons
+      {
+        padding: 15px;
+        margin-left: 15px;
+      }
+      #camp
+      {
+        font-style: oblique;
+        color: #ff944d;
+        background-color: #9999ff;
+        height: 45px;
+        opacity: 1;
+        transition: 0.3s;
+      }
+      #hotels
+      {
+        font-style: oblique;
+        color: #00b3b3;
+        background-color: #ffdb4d;
+        height: 45px;
+        opacity: 1;
+        transition: 0.3s;
+      }
+      #AFRICA
+      {
+        font-style: oblique;
+        color: #ffc266;
+        background-color: #ff6666;
+        height: 45px;
+        opacity: 1;
+        transition: 0.3s;
+      }
+       #map {
+        height: 100%;
+      }
+      html, body
+      {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #hotels:hover {opacity: 0.7}
+      #camp:hover {opacity: 0.7}
+      #AFRICA:hover {opacity:0.7};
+    </style>
+  </head>
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <body>
+    <div class="w3-display-container" style="margin-bottom:0px">
+<!-- Side Bar -->
+      <div class="w3-sidebar w3-bar-block w3-border-right w3-animate-left" style="display:none" id="mySidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+        <a href="https://ide50-dyersylvie.legacy.cs50.io:8080/Final/finalp1.html" class="w3-bar-item w3-button">Home</a>
+        <a href="https://ide50-dyersylvie.legacy.cs50.io:8080/Final/finalp2" class="w3-bar-item w3-button">Italy</a>
+        <a href="https://ide50-dyersylvie.legacy.cs50.io:8080/Final/final3.html" class="w3-bar-item w3-button">Utah</a>
+        <a href="https://ide50-dyersylvie.legacy.cs50.io:8080/Final/final4.html" class="w3-bar-item w3-button">Florida</a>
+        <a href="https://ide50-dyersylvie.legacy.cs50.io:8080/Final/final5.html" class="w3-bar-item w3-button">Others</a>
+      </div>
+      <div class="w3-white">
+        <button class="w3-button w3-white w3-xlarge " onclick="w3_open()">☰ See more!</button>
+      </div>
+<!-- Picture + Overlap Text -->
+      <img src="header.jpg" style="width:100%"  >
+      <div class="w3-display-bottomleft w3-container w3-white w3-hover-grey w3-hide-small" style="bottom:10%;opacity:0.7;width:70%">
+        <h2><b>Picutres No One Wants to See!<br>Claudio and Sylvie's Final Project :)</b></h2>
+      </div>
+    </div>
+<!-- Photos-->
+    <div class="w3-row w3-container" style="margin:50px 0">
+      <div class="w3-half w3-container">
+        <div class="w3-topbar w3-border-green">
+          <img src="forest.jpg" style="width:100%">
+          <h2>Forest of Trees</h2>
+          <p>A forest without trees is just like a plate without broccoli.</p>
+        </div>
+      </div>
+
+      <div class="w3-half w3-container">
+        <div class="w3-topbar w3-border-amber">
+          <img src="forest2.jpg" style="width:100%">
+          <h2>Forest of Trees (Part 2)</h2>
+          <p>This time wtih another shade of leaf.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-row w3-container" style="margin:50px 0">
+      <div class="w3-half w3-container">
+        <div class="w3-topbar w3-border-indigo">
+          <img src="sunset.jpg" style="width:100%">
+          <h2>Sunset Over a Lake</h2>
+          <p>A sunset without the Sun is just darkness.</p>
+        </div>
+      </div>
+      <div class="w3-half w3-container">
+        <div class="w3-topbar w3-border-teal">
+          <img src="waterfall.jpg" style="width:100%">
+          <h2>A Waterfall of Water</h2>
+          <p>A waterfall without water is just a cliff.</p>
+          </div>
+      </div>
+    </div>
+
+    <div id="buttons">
+     <!-- <h2> Start Your Own Trip!</h2> -->
+      <table style=" width: windowWidth">
+        <tr>
+          <th colspan = 3>Start Your Own Trip!</th>
+        </tr>
+        <tr>
+          <td>
+            <form action="https://www.cabelas.com/category/Camping/104795280.uts" method="get">
+            <input id="camp" type="submit" value="Want to go camping??!"
+            name="Submit" />
+            </form>
+          </td>
+          <td>
+            <form action="https://www.hotels.com" method="get" >
+              <input  type="submit" value="Need to find a hotel??!!"
+                name="Submit" id="hotels" />
+            </form>
+          </td>
+          <td>
+            <form action="https://www.tripadvisor.co.za/HotelsList-Africa-All_Inclusive-5-Star-Resort-zfp14209276.html" method="get">
+              <input type="submit" value="Want to journey to Africa?!"
+              name="Submit" id="AFRICA" />
+            </form>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+
+    <div class="w3-row w3-container" style="margin-left: 15px; font: Bookman ">
+      <h2><u>Places Featured on this Website!!</u></h2>
+    </div>
+
+
+    <div id="map"></div>
+    <script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+
+    function initMap() {
+      var myLatLng = {lat: 41.9006615, lng: 12.4795424};
+      var myLatLng2 = {lat: 25.7745119, lng: -80.2667975};
+      var myLatLng3 = {lat: 37.3545242, lng: -113.1899569};
+      var myLatLng4 = {lat: 41.828769, lng: -74.0766023};
+      var myLatLng5 = {lat: 37.4990903, lng: -120.6683445};
+
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 3,
+        center: {lat: 34.6681324, lng: -40.911563}
+      });
+      var Italy = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+      });
+      var Florida = new google.maps.Marker({
+        position: myLatLng2,
+        map: map,
+      });
+      var Utah = new google.maps.Marker({
+        position: myLatLng3,
+        map: map,
+      });
+      var NYC = new google.maps.Marker({
+        position: myLatLng4,
+        map: map,
+      });
+      var Cali = new google.maps.Marker({
+        position: myLatLng5,
+        map: map,
+      });
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqq-nOpHZ5_U5_13Kub40YSYSuDPzYWrc&v=3.exp&callback=initMap"async defer></script>
+  </body>
+</html>

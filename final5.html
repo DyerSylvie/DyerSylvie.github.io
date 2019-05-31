@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Final Project</title>
+    <style>
+      body
+      {
+        font-family: Serif, New Century Schoolbook, teX Gyre Schola;
+      }
+
+      h2
+      {
+        font-family: bookman;
+      }
+      pics
+      {
+          border: 5px solid white;
+      }
+    </style>
+  </head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <body>
+    <div class="w3-display-container" style="margin-bottom:0px">
+<!-- Side Bar -->
+      <div class="w3-sidebar w3-bar-block w3-border-right w3-animate-left" style="display:none" id="mySidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+        <a href="https://ide50-dyersylvie.legacy.cs50.io:8080/Final/finalp1.html" class="w3-bar-item w3-button">Home</a>
+        <a href="https://ide50-dyersylvie.legacy.cs50.io:8080/Final/finalp2" class="w3-bar-item w3-button">Italy</a>
+        <a href="https://ide50-dyersylvie.legacy.cs50.io:8080/Final/final3.html" class="w3-bar-item w3-button">Utah</a>
+        <a href="https://ide50-dyersylvie.legacy.cs50.io:8080/Final/final4.html" class="w3-bar-item w3-button">Florida</a>
+        <a href="https://ide50-dyersylvie.legacy.cs50.io:8080/Final/final5.html" class="w3-bar-item w3-button">Others</a>
+      </div>
+      <div class="w3-white">
+        <button class="w3-button w3-white w3-xlarge " onclick="w3_open()">☰ See more!</button>
+      </div>
+<!-- Picture + Overlap Text -->
+      <img src="x7.jpg" style="width:100%"  >
+      <div class="w3-display-bottomleft w3-container w3-white w3-hover-grey w3-hide-small" style="bottom:10%;opacity:0.7;width:70%">
+        <h2><b>Other Places!<br> ft. New York, California, and Many Others!!</b></h2>
+      </div>
+    </div>
+    <div class="w3-row" style="padding: 10px">
+      <div class="w3-half">
+        <div id="pics"><img src="x6.jpg" style="width:100%; display: block; border: 2px solid white" ></div>
+        <div id="pics"><img src="trees.jpg" style="width:100%; display: block; border: 2px solid white" ></div>
+        <div id="pics"><img src="xx.jpg" style="width:100%; display: block; border: 2px solid white" ></div>
+        <div id="pics"><img src="x5.jpg" style="width:100%; display: block; border: 2px solid white" ></div>
+        <div id="pics"><img src="x3.jpg" style="width:100%; display: block; border: 2px solid white" ></div>
+      </div>
+      <div class="w3-half">
+        <div id="pics"><img src="x2.jpg" style="width:100%; display: block; border: 2px solid white" ></div>
+        <div id="pics"><img src="yosem2.jpg" style="width:100%; display: block; border: 2px solid white" ></div>
+        <div id="pics"><img src="x9.jpg" style="width:100%; display: block; border: 2px solid white" ></div>
+        <div id="pics"><img src="x1.jpg" style="width:100%; display: block; border: 2px solid white" ></div>
+        <div id="pics"><img src="abc.jpg" style="width:100%; display: block; border: 2px solid white" ></div>
+      </div>
+    </div>
+    <script>
+      function w3_open()
+      {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function w3_close()
+      {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
